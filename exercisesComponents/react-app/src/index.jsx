@@ -10,13 +10,29 @@ import {createRoot} from "react-dom/client";
 // const root = createRoot(document.getElementById("root"));
 // root.render(<App />);
 // Exercise Component 2
+// function Hello() {
+//     return <div>
+//         <h2>Hello, World!</h2>
+//         <Message/>
+//     </div>
+// }
+// function Message() {
+//     return <p>What a beautiful day!</p>
+// }
+// createRoot(document.getElementById("root")).render(<Hello />);
+// Exercise Component 3
 function Hello() {
-    return <div>
-        <h2>Hello, World!</h2>
-        <Message/>
-    </div>
-}
-function Message() {
-    return <p>What a beautiful day!</p>
-}
-createRoot(document.getElementById("root")).render(<Hello />);
+        return <h2>Hello, World!</h2>;
+    }
+    function App() {
+            return <div>
+                <Hello />
+                <Hello />
+                <Message />
+                </div>
+        }
+
+        function Message() {
+            return <p>What a beautiful day!</p>
+        }
+createRoot(document.getElementById("root")).render(<App />);
